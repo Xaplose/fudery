@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Fudery</string>
+    <string name="app_name">fÜdery</string>
+    <string name="greeting">Hello,</string>
+    <string name="homepage_msg">What\'s your intake today?</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_history">History</string>
+    <string name="title_discover">Discover</string>
+    <string name="text_sign_out">Sign Out</string>
 </resources>

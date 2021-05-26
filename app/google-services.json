@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "911458192141",
+    "project_id": "fudery-da513",
+    "storage_bucket": "fudery-da513.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911458192141:android:21d60fabb59e97e318be44",
+        "android_client_info": {
+          "package_name": "bangkit.xaplose.fudery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911458192141-e293kvrk2qjdihaq8rdhp0l31eq9togb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bangkit.xaplose.fudery",
+            "certificate_hash": "1637d9c4f49b0d15fd0257b81f562505462410f2"
+          }
+        },
+        {
+          "client_id": "911458192141-i15vg2g3scm6msaij4j1iv84d902jiag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHn_qOO-hoxpckvmmxWOWpzcvs7sLNdYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911458192141-i15vg2g3scm6msaij4j1iv84d902jiag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
