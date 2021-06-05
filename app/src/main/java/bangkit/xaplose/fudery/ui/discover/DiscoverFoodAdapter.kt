@@ -42,7 +42,7 @@ class DiscoverFoodAdapter : RecyclerView.Adapter<DiscoverFoodAdapter.ListViewHol
                 Glide.with(itemView.context)
                     .load(data.imageUrl)
                     .apply(
-                        RequestOptions.placeholderOf(R.drawable.ic_loading)
+                        RequestOptions.placeholderOf(R.drawable.ic_item_loading)
                             .error(R.drawable.ic_error)
                     )
                     .into(imgFood)

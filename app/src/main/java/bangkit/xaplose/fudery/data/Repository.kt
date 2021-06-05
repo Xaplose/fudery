@@ -1,6 +1,7 @@
 package bangkit.xaplose.fudery.data
 
 import bangkit.xaplose.fudery.data.model.Food
+import bangkit.xaplose.fudery.data.model.FoodDetails
 import bangkit.xaplose.fudery.data.source.remote.RemoteDataSource
 import bangkit.xaplose.fudery.data.source.remote.response.IngredientResponse
 import bangkit.xaplose.fudery.data.source.remote.response.IngredientSearchResponse
@@ -32,5 +33,18 @@ class Repository(private val dataSource: RemoteDataSource) {
             )
         }
         return foodList
+    }
+
+    suspend fun getFoodById(id: Int): FoodDetails {
+        val ingredientResponse = dataSource.getFoodById(id)
+        val foodDetails = FoodDetails(
+            ingredientResponse.id,
+            ingredientResponse.name,
+            INGREDIENTS_IMAGE_BASE_URL + ingredientResponse.image,
+            ingredientResponse.nutrition.weightPerServing,
+            ingredientResponse.nutrition.caloricBreakdown,
+            ingredientResponse.nutrition.nutrients
+        )
+        return foodDetails
     }
 }

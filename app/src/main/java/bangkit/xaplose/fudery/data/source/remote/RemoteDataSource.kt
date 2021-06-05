@@ -1,6 +1,7 @@
 package bangkit.xaplose.fudery.data.source.remote
 
 import bangkit.xaplose.fudery.data.source.remote.network.ApiService
+import bangkit.xaplose.fudery.data.source.remote.response.IngredientResponse
 import bangkit.xaplose.fudery.data.source.remote.response.IngredientSearchResponse
 
 class RemoteDataSource(private val apiService: ApiService) {
@@ -16,6 +17,10 @@ class RemoteDataSource(private val apiService: ApiService) {
 
     suspend fun getFoodListByName(name: String): IngredientSearchResponse {
         return apiService.getFoodListByName(name)
+    }
+
+    suspend fun getFoodById(id: Int): IngredientResponse {
+        return apiService.getFoodById(id)
     }
 }
 

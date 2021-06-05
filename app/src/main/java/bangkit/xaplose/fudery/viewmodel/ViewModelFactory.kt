@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import bangkit.xaplose.fudery.data.Repository
 import bangkit.xaplose.fudery.di.Injection
 import bangkit.xaplose.fudery.ui.discover.DiscoverViewModel
+import bangkit.xaplose.fudery.ui.fooddetails.DetailsViewModel
 
 class ViewModelFactory private constructor(private val mRepository: Repository) :
     ViewModelProvider.NewInstanceFactory() {
@@ -26,6 +27,9 @@ class ViewModelFactory private constructor(private val mRepository: Repository) 
         return when {
             modelClass.isAssignableFrom(DiscoverViewModel::class.java) -> {
                 DiscoverViewModel(mRepository) as T
+            }
+            modelClass.isAssignableFrom(DetailsViewModel::class.java) -> {
+                DetailsViewModel(mRepository) as T
             }
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
         }

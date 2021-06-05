@@ -9,7 +9,11 @@
         android:id="@+id/navigation_discover"
         android:name="bangkit.xaplose.fudery.ui.discover.DiscoverFragment"
         android:label="@string/title_discover"
-        tools:layout="@layout/fragment_discover" />
+        tools:layout="@layout/fragment_discover" >
+        <action
+            android:id="@+id/action_navigation_discover_to_foodDetailsFragment"
+            app:destination="@id/foodDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_history"
@@ -22,4 +26,13 @@
         android:name="bangkit.xaplose.fudery.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/foodDetailsFragment"
+        android:name="bangkit.xaplose.fudery.ui.fooddetails.FoodDetailsFragment"
+        android:label="@string/title_details"
+        tools:layout="@layout/fragment_food_details">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
 </navigation>
