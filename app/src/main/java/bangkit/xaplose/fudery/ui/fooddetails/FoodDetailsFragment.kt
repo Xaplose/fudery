@@ -13,6 +13,7 @@ import bangkit.xaplose.fudery.databinding.FragmentFoodDetailsBinding
 import bangkit.xaplose.fudery.viewmodel.ViewModelFactory
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import java.util.*
 
 private const val FOOD_ID = "id"
 
@@ -67,7 +68,7 @@ class FoodDetailsFragment : Fragment() {
                 )
                 .into(imgFood)
 
-            tvFoodName.text = foodDetails.name
+            tvFoodName.text = foodDetails.name.capitalize(Locale.ROOT)
             with(foodDetails.weightPerServing) {
                 tvWps.text = getString(R.string.desc_weight_per_serving, this.amount, this.unit)
             }

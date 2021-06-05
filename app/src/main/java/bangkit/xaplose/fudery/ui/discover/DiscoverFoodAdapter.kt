@@ -46,7 +46,7 @@ class DiscoverFoodAdapter : RecyclerView.Adapter<DiscoverFoodAdapter.ListViewHol
                             .error(R.drawable.ic_error)
                     )
                     .into(imgFood)
-                tvName.text = data.name
+                tvName.text = data.name.capitalize(Locale.ROOT)
             }
         }
 
