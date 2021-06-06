@@ -37,7 +37,7 @@ class Repository(private val dataSource: RemoteDataSource) {
 
     suspend fun getFoodById(id: Int): FoodDetails {
         val ingredientResponse = dataSource.getFoodById(id)
-        val foodDetails = FoodDetails(
+        return FoodDetails(
             ingredientResponse.id,
             ingredientResponse.name,
             INGREDIENTS_IMAGE_BASE_URL + ingredientResponse.image,
@@ -45,6 +45,5 @@ class Repository(private val dataSource: RemoteDataSource) {
             ingredientResponse.nutrition.caloricBreakdown,
             ingredientResponse.nutrition.nutrients
         )
-        return foodDetails
     }
 }

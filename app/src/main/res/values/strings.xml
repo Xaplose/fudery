@@ -9,7 +9,6 @@
     <string name="title_details">Food Details</string>
     <string name="text_sign_out">Sign Oüt</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="desc_food_image">Food Image</string>
     <string name="desc_caloric_breakdown">Caloric Breakdown</string>
     <string name="desc_percentage">%.2f%%</string>
@@ -20,4 +19,7 @@
     <string name="desc_nutrition_facts">Nütrition Facts</string>
     <string name="nutrient_list_space_fill">.............................................................</string>
     <string name="desc_nutrient_amount">%.2f%s</string>
+    <string name="desc_name">Name</string>
+    <string name="desc_email">Email</string>
+    <string name="desc_id">Üser ID</string>
 </resources>

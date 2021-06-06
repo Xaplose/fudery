@@ -89,14 +89,4 @@ class FoodDetailsFragment : Fragment() {
             binding.progressBar.visibility = View.GONE
         }
     }
-
-    companion object {
-        @JvmStatic
-        fun newInstance(id: Int) =
-            FoodDetailsFragment().apply {
-                arguments = Bundle().apply {
-                    putInt(FOOD_ID, id)
-                }
-            }
-    }
 }

@@ -1,7 +1,6 @@
 package bangkit.xaplose.fudery.data.source.remote.network
 
 import bangkit.xaplose.fudery.utils.Constants.Companion.FOOD_INGREDIENTS_BASE_URL
-import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
