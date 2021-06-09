@@ -12,18 +12,20 @@
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/desc_food_photo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
-        android:contentDescription="@string/desc_food_photo" />
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="@string/desc_name"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:layout_constraintBottom_toBottomOf="@+id/img_food"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_food"
-        app:layout_constraintTop_toTopOf="@+id/img_food"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+        app:layout_constraintTop_toTopOf="@+id/img_food" />
 </androidx.constraintlayout.widget.ConstraintLayout>

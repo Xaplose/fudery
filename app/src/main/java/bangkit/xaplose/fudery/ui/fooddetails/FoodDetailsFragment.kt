@@ -55,7 +55,7 @@ class FoodDetailsFragment : Fragment() {
                 Snackbar.LENGTH_SHORT
             ).show()
             deleteMenuItem.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_deleted)
-            isDeleted =  true
+            isDeleted = true
         }
         return super.onOptionsItemSelected(item)
     }
@@ -95,7 +95,9 @@ class FoodDetailsFragment : Fragment() {
             detailsViewModel.getFoodDetailsById(id as Int).observe(viewLifecycleOwner) {
                 foodDetails = it
                 updateUI(it)
-                detailsViewModel.addToHistory(it)
+                if (it.id != -1) {
+                    detailsViewModel.addToHistory(it)
+                }
             }
         }
     }
@@ -118,7 +120,8 @@ class FoodDetailsFragment : Fragment() {
                 with(foodDetails.caloricBreakdown) {
                     tvCarbsPercentage.text = getString(R.string.desc_percentage, this.percentCarbs)
                     tvFatPercentage.text = getString(R.string.desc_percentage, this.percentFat)
-                    tvProteinPercentage.text = getString(R.string.desc_percentage, this.percentProtein)
+                    tvProteinPercentage.text =
+                        getString(R.string.desc_percentage, this.percentProtein)
                 }
                 adapter.setData(foodDetails.nutrients)
             }
