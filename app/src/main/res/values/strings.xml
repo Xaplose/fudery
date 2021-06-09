@@ -27,4 +27,7 @@
     <string name="desc_delete_icon">Delete icon</string>
     <string name="title_delete_from_hist">Delete from history</string>
     <string name="desc_no_hist">No history available...</string>
+    <string name="image_to_predict">Image to predict</string>
+    <string name="search_by_camera">Search by camera</string>
+    <string name="search_by_image">Search by image</string>
 </resources>

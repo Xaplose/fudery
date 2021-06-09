@@ -10,7 +10,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import bangkit.xaplose.fudery.data.model.FoodDetails
 import bangkit.xaplose.fudery.databinding.FragmentHistoryBinding
-import bangkit.xaplose.fudery.ui.discover.DiscoverFragmentDirections
 import bangkit.xaplose.fudery.viewmodel.ViewModelFactory
 import com.google.android.material.snackbar.Snackbar
 import java.util.*
@@ -51,7 +50,7 @@ class HistoryFragment : Fragment() {
     }
 
     private fun updateData(data: List<FoodDetails>?) {
-        if (data != null && !data.isEmpty()) {
+        if (data != null && data.isNotEmpty()) {
             adapter.setData(data)
             binding.tvNoHist.visibility = View.GONE
             binding.rvHistoryList.visibility = View.VISIBLE
@@ -67,7 +66,8 @@ class HistoryFragment : Fragment() {
         adapter = HistoryFoodAdapter()
         adapter.onItemClick = {
             val action = HistoryFragmentDirections.actionNavigationHistoryToFoodDetailsFragment(
-                id = it.id, history = true)
+                id = it.id, history = true
+            )
             findNavController().navigate(action)
         }
         adapter.onDeleteIconClick = {

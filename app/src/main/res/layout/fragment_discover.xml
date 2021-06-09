@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
     tools:context=".ui.discover.DiscoverFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -46,45 +45,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Search by camera"
-            android:textAllCaps="false"
             android:backgroundTint="@color/yellow_500"
+            android:text="@string/search_by_camera"
+            android:textAllCaps="false"
             android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="@+id/tv_homepage_msg"
             app:layout_constraintEnd_toStartOf="@id/btn_gallery"
-            app:layout_constraintTop_toBottomOf="@+id/searchView" />
+            app:layout_constraintStart_toStartOf="@+id/tv_homepage_msg"
+            app:layout_constraintTop_toBottomOf="@+id/img_photo" />
 
         <Button
             android:id="@+id/btn_gallery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search by image"
             android:backgroundTint="@color/yellow_500"
-            android:textColor="@color/black"
+            android:text="@string/search_by_image"
             android:textAllCaps="false"
-            app:layout_constraintStart_toEndOf="@+id/btn_camera"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_camera"
             app:layout_constraintTop_toTopOf="@+id/btn_camera" />
 
         <SearchView
             android:id="@+id/searchView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_bg"
             android:iconifiedByDefault="false"
             android:queryHint="Search your latest meal..."
-            android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@+id/tv_homepage_msg"
-            android:background="@drawable/rounded_bg"
             tools:layout_editor_absoluteX="36dp" />
 
         <ImageView
             android:id="@+id/img_photo"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:contentDescription="@string/image_to_predict"
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_camera"
+            app:layout_constraintTop_toBottomOf="@+id/searchView"
             tools:src="@tools:sample/backgrounds/scenic" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -92,11 +92,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:nestedScrollingEnabled="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_camera"
-            android:nestedScrollingEnabled="false"
             tools:listitem="@layout/item_row_food" />
 
         <ProgressBar
