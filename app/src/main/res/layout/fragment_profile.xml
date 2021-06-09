@@ -7,26 +7,121 @@
     android:padding="16dp"
     tools:context=".ui.profile.ProfileFragment">
 
-    <TextView
-        android:id="@+id/text_notifications"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_user"
+        android:layout_width="180dp"
+        android:layout_height="200dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars"/>
+
+    <TextView
+        android:id="@+id/tv_title_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_user"
+        android:text="@string/desc_name"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.2"
+        android:maxLines="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/nutrient_list_space_fill"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_name"
+        app:layout_constraintEnd_toStartOf="@id/tv_uname"
+        app:layout_constraintStart_toEndOf="@id/tv_title_name" />
+
+    <TextView
+        android:id="@+id/tv_uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_name"
+        tools:text="Xaplose"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"/>
+
+    <TextView
+        android:id="@+id/tv_title_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_name"
+        android:text="@string/desc_email"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.2"
+        android:maxLines="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/nutrient_list_space_fill"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_email"
+        app:layout_constraintEnd_toStartOf="@id/tv_email"
+        app:layout_constraintStart_toEndOf="@id/tv_title_email" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_email"
+        tools:text="xaplose.0132@bangkit.academy"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"/>
+
+    <TextView
+        android:id="@+id/tv_title_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_email"
+        android:text="@string/desc_id"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.2"
+        android:maxLines="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/nutrient_list_space_fill"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_id"
+        app:layout_constraintEnd_toStartOf="@id/tv_uid"
+        app:layout_constraintStart_toEndOf="@id/tv_title_id" />
+
+    <TextView
+        android:id="@+id/tv_uid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_id"
+        tools:text="a1s2s3d4f56g7h8j9k0k0"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"/>
 
     <Button
         android:id="@+id/btn_sign_out"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/text_sign_out"
-        app:layout_constraintTop_toBottomOf="@id/text_notifications"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/yellow_500"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

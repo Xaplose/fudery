@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fooddetails.FoodDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_food"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/desc_food_image"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toEndOf="@id/img_food"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Banana"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+        <TextView
+            android:id="@+id/tv_wps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/img_food"
+            app:layout_constraintTop_toBottomOf="@id/tv_food_name"
+            tools:text="Weight per serving:\n905g" />
+
+        <TextView
+            android:id="@+id/tv_caloric_breakdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_food"
+            android:text="@string/desc_caloric_breakdown"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+        <TextView
+            android:id="@+id/tv_carbs_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/divider1"
+            app:layout_constraintTop_toBottomOf="@id/tv_caloric_breakdown"
+            tools:text="94.18%" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toEndOf="@id/tv_carbs_percentage"
+            app:layout_constraintEnd_toStartOf="@id/tv_protein_percentage"
+            app:layout_constraintTop_toTopOf="@id/tv_carbs_percentage"
+            app:layout_constraintBottom_toBottomOf="@id/tv_carbs_breakdown"
+            android:background="#c0c0c0" />
+
+        <TextView
+            android:id="@+id/tv_protein_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_caloric_breakdown"
+            tools:text="3.88%" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toEndOf="@id/tv_protein_percentage"
+            app:layout_constraintEnd_toStartOf="@id/tv_fat_percentage"
+            app:layout_constraintTop_toTopOf="@id/tv_protein_percentage"
+            app:layout_constraintBottom_toBottomOf="@id/tv_protein_breakdown"
+            android:background="#c0c0c0" />
+
+        <TextView
+            android:id="@+id/tv_fat_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toEndOf="@id/divider2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_caloric_breakdown"
+            tools:text="1.94%" />
+
+        <TextView
+            android:id="@+id/tv_carbs_breakdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tv_carbs_percentage"
+            app:layout_constraintEnd_toEndOf="@id/tv_carbs_percentage"
+            app:layout_constraintTop_toBottomOf="@id/tv_carbs_percentage"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            android:text="@string/desc_carbohydrates" />
+
+        <TextView
+            android:id="@+id/tv_protein_breakdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tv_protein_percentage"
+            app:layout_constraintEnd_toEndOf="@id/tv_protein_percentage"
+            app:layout_constraintTop_toBottomOf="@id/tv_protein_percentage"
+            android:text="@string/desc_protein" />
+
+        <TextView
+            android:id="@+id/tv_fat_breakdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tv_fat_percentage"
+            app:layout_constraintEnd_toEndOf="@id/tv_fat_percentage"
+            app:layout_constraintTop_toBottomOf="@id/tv_fat_percentage"
+            android:text="@string/desc_fat" />
+
+        <TextView
+            android:id="@+id/tv_nutrition_facts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_carbs_breakdown"
+            android:text="@string/desc_nutrition_facts"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_nutrients"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/tv_nutrition_facts"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/item_row_nutrient"/>
+
+        <FrameLayout
+            android:id="@+id/progress_bar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"/>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

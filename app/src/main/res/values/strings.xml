@@ -1,10 +1,30 @@
 <resources>
     <string name="app_name">fÜdery</string>
     <string name="greeting">Hello,</string>
-    <string name="homepage_msg">What\'s your intake today?</string>
+    <string name="homepage_msg">What\'s yoür intake today?</string>
     <string name="title_activity_main2">MainActivity</string>
     <string name="title_profile">Profile</string>
     <string name="title_history">History</string>
     <string name="title_discover">Discover</string>
-    <string name="text_sign_out">Sign Out</string>
+    <string name="title_details">Food Details</string>
+    <string name="text_sign_out">Sign Oüt</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="desc_food_image">Food Image</string>
+    <string name="desc_caloric_breakdown">Caloric Breakdown</string>
+    <string name="desc_percentage">%.2f%%</string>
+    <string name="desc_carbohydrates">Carbs</string>
+    <string name="desc_protein">Protein</string>
+    <string name="desc_fat">Fat</string>
+    <string name="desc_weight_per_serving">Weight per serving:\n%d%s</string>
+    <string name="desc_nutrition_facts">Nütrition Facts</string>
+    <string name="nutrient_list_space_fill">.............................................................</string>
+    <string name="desc_nutrient_amount">%.2f%s</string>
+    <string name="desc_name">Name</string>
+    <string name="desc_email">Email</string>
+    <string name="desc_id">Üser ID</string>
+    <string name="history_msg">Search History</string>
+    <string name="desc_food_photo">Food photo</string>
+    <string name="desc_delete_icon">Delete icon</string>
+    <string name="title_delete_from_hist">Delete from history</string>
+    <string name="desc_no_hist">No history available...</string>
 </resources>

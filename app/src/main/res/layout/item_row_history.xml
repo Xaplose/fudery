@@ -26,4 +26,14 @@
         app:layout_constraintStart_toEndOf="@+id/img_food"
         app:layout_constraintTop_toTopOf="@+id/img_food"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+    <ImageView
+        android:id="@+id/ic_delete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_delete_outline"
+        app:layout_constraintTop_toTopOf="@id/img_food"
+        app:layout_constraintBottom_toBottomOf="@id/img_food"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/desc_delete_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

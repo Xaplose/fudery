@@ -104,13 +104,13 @@ data class EstimatedCost(
 	val unit: String,
 
 	@field:SerializedName("value")
-	val value: Int
+	val value: Double
 )
 
 data class FlavanoidsItem(
 
 	@field:SerializedName("amount")
-	val amount: Int,
+	val amount: Double,
 
 	@field:SerializedName("unit")
 	val unit: String,

@@ -9,12 +9,13 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import bangkit.xaplose.fudery.data.source.remote.network.RetrofitInstance
 import bangkit.xaplose.fudery.databinding.FragmentDiscoverBinding
 import bangkit.xaplose.fudery.viewmodel.ViewModelFactory
 import com.google.firebase.auth.ktx.auth
@@ -52,7 +53,7 @@ class DiscoverFragment : Fragment(), View.OnClickListener {
     }
 
     private fun setupViewModel() {
-        val factory = ViewModelFactory.getInstance()
+        val factory = ViewModelFactory.getInstance(requireContext())
         viewModel = ViewModelProvider(this, factory)[DiscoverViewModel::class.java]
         viewModel.getFoodListByName("Apple")
         observeGetFoodListByName()
@@ -90,7 +91,8 @@ class DiscoverFragment : Fragment(), View.OnClickListener {
     private fun setupRecyclerViewAdapter() {
         foodAdapter = DiscoverFoodAdapter()
         foodAdapter.onItemClick = { selectedFood ->
-            Toast.makeText(context, selectedFood.name, Toast.LENGTH_LONG).show()
+            val action = DiscoverFragmentDirections.actionNavigationDiscoverToFoodDetailsFragment(id=selectedFood.id)
+            findNavController().navigate(action)
         }
     }
 
