@@ -22,4 +22,9 @@
     <string name="desc_name">Name</string>
     <string name="desc_email">Email</string>
     <string name="desc_id">Üser ID</string>
+    <string name="history_msg">Search History</string>
+    <string name="desc_food_photo">Food photo</string>
+    <string name="desc_delete_icon">Delete icon</string>
+    <string name="title_delete_from_hist">Delete from history</string>
+    <string name="desc_no_hist">No history available...</string>
 </resources>

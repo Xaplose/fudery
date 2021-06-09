@@ -19,7 +19,11 @@
         android:id="@+id/navigation_history"
         android:name="bangkit.xaplose.fudery.ui.history.HistoryFragment"
         android:label="@string/title_history"
-        tools:layout="@layout/fragment_history" />
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_navigation_history_to_foodDetailsFragment"
+            app:destination="@id/foodDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
@@ -34,5 +38,9 @@
         <argument
             android:name="id"
             app:argType="integer" />
+        <argument
+            android:name="history"
+            app:argType="boolean"
+            android:defaultValue="false" />
     </fragment>
 </navigation>

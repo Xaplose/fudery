@@ -53,7 +53,7 @@ class DiscoverFragment : Fragment(), View.OnClickListener {
     }
 
     private fun setupViewModel() {
-        val factory = ViewModelFactory.getInstance()
+        val factory = ViewModelFactory.getInstance(requireContext())
         viewModel = ViewModelProvider(this, factory)[DiscoverViewModel::class.java]
         viewModel.getFoodListByName("Apple")
         observeGetFoodListByName()
