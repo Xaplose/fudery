@@ -22,4 +22,8 @@ class DiscoverViewModel(private val mRepository: Repository) : ViewModel() {
             foodList.value = foodListRes
         }
     }
+
+    fun predict(imgFilePath: String) {
+        mRepository.predict(imgFilePath)
+    }
 }

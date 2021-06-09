@@ -6,6 +6,7 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -138,6 +139,8 @@ class DiscoverFragment : Fragment(), View.OnClickListener {
         } else if (requestCode == REQUEST_IMAGE_GALLERY && resultCode == RESULT_OK) {
             val imageUri = data?.data
             binding.imgPhoto.setImageURI(imageUri)
+            Log.d("IMAGE_URI: ", imageUri.toString())
+            viewModel.predict(imageUri.toString())
         }
         binding.imgPhoto.visibility = View.VISIBLE
     }

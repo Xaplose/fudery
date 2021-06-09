@@ -8,6 +8,11 @@ import bangkit.xaplose.fudery.data.source.remote.RemoteDataSource
 import bangkit.xaplose.fudery.data.source.remote.response.IngredientResponse
 import bangkit.xaplose.fudery.data.source.remote.response.IngredientSearchResponse
 import bangkit.xaplose.fudery.utils.Constants.Companion.INGREDIENTS_IMAGE_BASE_URL
+import okhttp3.MediaType
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.RequestBody
+import okhttp3.RequestBody.Companion.asRequestBody
+import java.io.File
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -58,6 +63,8 @@ class Repository(
     fun delete(food: FoodDetails) {
         executorService.execute { mFoodDao.delete(food) }
     }
+
+    fun predict(imgFilePath: String) = dataSource.predict(imgFilePath)
 
     companion object {
         @Volatile
