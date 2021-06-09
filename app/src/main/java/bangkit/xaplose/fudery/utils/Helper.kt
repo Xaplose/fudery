@@ -6,7 +6,6 @@ import android.database.Cursor
 import android.net.Uri
 import android.provider.MediaStore
 import android.util.Log
-import java.util.*
 
 object Helper {
     @SuppressLint("Recycle")
@@ -24,10 +23,5 @@ object Helper {
         } finally {
             cursor?.close()
         }
-    }
-
-    fun getImageFilename(): String {
-        return Calendar.getInstance().time.toString().replace(" ", "_").replace(":", "")
-            .replace("+", "")
     }
 }

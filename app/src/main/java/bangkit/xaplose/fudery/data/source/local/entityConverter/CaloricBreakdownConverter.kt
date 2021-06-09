@@ -2,7 +2,6 @@ package bangkit.xaplose.fudery.data.source.local.entityConverter
 
 import androidx.room.TypeConverter
 import bangkit.xaplose.fudery.data.source.remote.response.CaloricBreakdown
-import bangkit.xaplose.fudery.data.source.remote.response.WeightPerServing
 
 class CaloricBreakdownConverter {
     @TypeConverter

@@ -41,8 +41,8 @@ class DiscoverFragment : Fragment(), View.OnClickListener {
     private lateinit var foodPredictionName: String
     private lateinit var foodAdapter: DiscoverFoodAdapter
 
-    val REQUEST_IMAGE_CAPTURE = 1
-    val REQUEST_IMAGE_GALLERY = 2
+    private val REQUEST_IMAGE_CAPTURE = 1
+    private val REQUEST_IMAGE_GALLERY = 2
 
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()

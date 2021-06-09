@@ -17,6 +17,4 @@ interface ApiService {
     suspend fun getFoodById(
         @Path("id") id: Int
     ): IngredientResponse
-
-
 }
