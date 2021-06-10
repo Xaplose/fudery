@@ -30,6 +30,14 @@
           }
         },
         {
+          "client_id": "911458192141-ifc7fqerli891m7qd4sg6d258hpa6s65.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bangkit.xaplose.fudery",
+            "certificate_hash": "29965088f07230b4cf3cd4bad8d1d9e24f6fad55"
+          }
+        },
+        {
           "client_id": "911458192141-r0o5fhf7397f809tdvgegnm5ssm55jun.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
