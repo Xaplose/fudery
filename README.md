@@ -14,13 +14,15 @@ Smart Nutrition Assistant to manage your daily food intake.
 6. Fitrandi Rahayu - C3122783  
 
 ## Local Setup
-* Clone this repository
+* Clone this repository.
 ```cmd
 git clone https://github.com/Xaplose/fudery.git
 ```
-* Open this project through Android Studio (recommended)
-* Wait for gradle to build project
-* Run on AVD or Real Devices
+* Open this project through Android Studio (recommended).
+* Wait for gradle to build project.
+* Setup your own firebase configuration file. See <a href="https://firebase.google.com/docs/android/setup" ><b>here(1)</b></a>, <a href="https://developers.google.com/android/guides/client-auth" ><b>here(2)</b></a>, or <a href="https://firebase.google.com/docs/auth/android/google-signin#kotlin+ktx" ><b>here(3)</b></a>. 
+* Make sure to add your signing certificate to the firebase console and firebase configuration file.
+* Run on AVD or Real Devices.
 
 ## Screenshots
 [<img src="screenshots/Screenshot_0.png" width="25%" />](screenshot/Screenshot_0.png)
