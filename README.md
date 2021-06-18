@@ -30,3 +30,8 @@ git clone https://github.com/Xaplose/fudery.git
 [<img src="screenshots/Screenshot_2.png" width="25%" />](screenshot/Screenshot_2.png)
 [<img src="screenshots/Screenshot_3.png" width="25%" />](screenshot/Screenshot_3.png)
 [<img src="screenshots/Screenshot_4.png" width="25%" />](screenshot/Screenshot_4.png)
+
+## Live Demo App
+```cmd
+https://www.youtube.com/watch?v=PNxizgOdaiA&ab_channel=AdhytiaWana
+```
